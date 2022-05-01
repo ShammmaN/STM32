@@ -1,0 +1,15 @@
+EasyModBus.c:58:6:ModBus	16	static
+EasyModBus.c:157:6:ReadBinOutput	4	static
+EasyModBus.c:163:6:ReadBinInput	4	static
+EasyModBus.c:169:6:ReadRegister	4	static
+EasyModBus.c:175:6:ReadRegisterInput	4	static
+EasyModBus.c:181:6:WriteBit	4	static
+EasyModBus.c:187:6:WriteSingleRegister	4	static
+EasyModBus.c:193:6:ReadStatus	4	static
+EasyModBus.c:199:6:DiagnosticTest	4	static
+EasyModBus.c:205:6:WriteBitMultiple	4	static
+EasyModBus.c:212:6:WhoIAm	4	static
+EasyModBus.c:218:6:WriteRegister	4	static
+EasyModBus.c:224:6:WriteRegisterMultiple	4	static
+EasyModBus.c:234:6:ModBus_Transmit	16	static
+EasyModBus.c:272:6:ModBus_Recive	4	static
