@@ -1,0 +1,62 @@
+/*
+ * menu.h
+ *
+ *  Created on: Jun 28, 2022
+ *      Author: shammman
+ */
+#include "stm32f4xx.h"
+
+void menu(uint16_t Position);
+
+
+void Menu1();
+void Menu2();
+void Menu3();
+void Menu4();
+void Menu5();
+void Menu6();
+
+
+void Menu10();
+void Menu11();
+void Menu12();
+void Menu13();
+void Menu14();
+void Menu15();
+
+void Menu20();
+void Menu21();
+void Menu22();
+void Menu23();
+void Menu24();
+void Menu25();
+
+void Menu30();
+void Menu31();
+void Menu32();
+void Menu33();
+void Menu34();
+void Menu35();
+
+void Menu40();
+void Menu41();
+void Menu42();
+void Menu43();
+void Menu44();
+void Menu45();
+
+void Menu50();
+void Menu51();
+void Menu52();
+void Menu53();
+void Menu54();
+void Menu55();
+
+void Menu60();
+void Menu61();
+void Menu62();
+void Menu63();
+void Menu64();
+void Menu65();
+
+

@@ -1,0 +1,17 @@
+16:00:07 **** Incremental Build of configuration Debug for project Universal_Box_Test ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/LCD4x20/i2c-lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Universal_Box_Test/Drivers/LCD4x20" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Universal_Box_Test/Drivers/KeyPad" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/LCD4x20/i2c-lcd.d" -MT"Drivers/LCD4x20/i2c-lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/LCD4x20/i2c-lcd.o"
+arm-none-eabi-gcc -o "Universal_Box_Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Universal_Box_Test/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Universal_Box_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Universal_Box_Test.elf
+ 
+arm-none-eabi-size   Universal_Box_Test.elf 
+arm-none-eabi-objdump -h -S  Universal_Box_Test.elf  > "Universal_Box_Test.list"
+   text	   data	    bss	    dec	    hex	filename
+  12396	    124	   1692	  14212	   3784	Universal_Box_Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Universal_Box_Test.list
+ 
+
+16:00:08 Build Finished. 0 errors, 0 warnings. (took 1s.12ms)
+

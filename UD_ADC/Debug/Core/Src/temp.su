@@ -1,0 +1,3 @@
+../Core/Src/temp.c:18:6:Temp_Init	4	static
+../Core/Src/temp.c:51:6:Temp_Start	4	static
+../Core/Src/temp.c:58:10:Temp_Read	4	static

@@ -1,0 +1,10 @@
+11:18:13 **** Incremental Build of configuration Debug for project HAL_TEST ****
+make -j4 all 
+arm-none-eabi-size   HAL_TEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10596	     20	   1668	  12284	   2ffc	HAL_TEST.elf
+Finished building: default.size.stdout
+ 
+
+11:18:14 Build Finished. 0 errors, 0 warnings. (took 753ms)
+

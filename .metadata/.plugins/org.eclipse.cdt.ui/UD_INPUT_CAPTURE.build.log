@@ -1,0 +1,10 @@
+11:18:16 **** Incremental Build of configuration Debug for project UD_INPUT_CAPTURE ****
+make -j4 all 
+arm-none-eabi-size   UD_INPUT_CAPTURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1016	     12	   1572	   2600	    a28	UD_INPUT_CAPTURE.elf
+Finished building: default.size.stdout
+ 
+
+11:18:16 Build Finished. 0 errors, 0 warnings. (took 586ms)
+

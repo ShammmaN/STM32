@@ -1,0 +1,5 @@
+../Core/Src/MyUART.c:12:6:uart2_TX_init	8	static
+../Core/Src/MyUART.c:63:7:__io_putchar	16	static
+../Core/Src/MyUART.c:70:6:uart_write	16	static
+../Core/Src/MyUART.c:81:13:uart_set_baudrate	24	static
+../Core/Src/MyUART.c:86:17:compute_uart_br	16	static

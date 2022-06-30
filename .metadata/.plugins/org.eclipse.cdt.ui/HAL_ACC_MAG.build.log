@@ -1,0 +1,10 @@
+15:33:39 **** Incremental Build of configuration Debug for project HAL_ACC_MAG ****
+make -j4 all 
+arm-none-eabi-size   HAL_ACC_MAG.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10472	     20	   1660	  12152	   2f78	HAL_ACC_MAG.elf
+Finished building: default.size.stdout
+ 
+
+15:33:39 Build Finished. 0 errors, 0 warnings. (took 644ms)
+

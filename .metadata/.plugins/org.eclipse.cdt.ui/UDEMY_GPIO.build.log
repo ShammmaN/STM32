@@ -1,0 +1,10 @@
+11:18:15 **** Incremental Build of configuration Debug for project UDEMY_GPIO ****
+make -j4 all 
+arm-none-eabi-size   UDEMY_GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1504	     12	   1572	   3088	    c10	UDEMY_GPIO.elf
+Finished building: default.size.stdout
+ 
+
+11:18:16 Build Finished. 0 errors, 0 warnings. (took 537ms)
+

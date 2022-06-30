@@ -1,0 +1,7 @@
+../Core/Src/LSM303.c:97:6:LSM303_Init	40	static
+../Core/Src/LSM303.c:116:6:lsm303dlhc_init_la	40	static
+../Core/Src/LSM303.c:131:6:lsm303dlhc_read_la	48	static
+../Core/Src/LSM303.c:158:6:lsm303dlhc_read_magneto	48	static
+../Core/Src/LSM303.c:184:6:lsm303dlhc_read_mf_temp	40	static
+../Core/Src/LSM303.c:195:6:lsm303dlhc_read_mf_b	32	static
+../Core/Src/LSM303.c:238:6:lsm303dlhc_init_mf	32	static

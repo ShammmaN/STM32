@@ -1,0 +1,17 @@
+10:26:04 **** Incremental Build of configuration Debug for project HAL_Experimental ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "HAL_Experimental.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/HAL_Experimental/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_Experimental.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HAL_Experimental.elf
+ 
+arm-none-eabi-size   HAL_Experimental.elf 
+arm-none-eabi-objdump -h -S  HAL_Experimental.elf  > "HAL_Experimental.list"
+   text	   data	    bss	    dec	    hex	filename
+  11224	     28	   1716	  12968	   32a8	HAL_Experimental.elf
+Finished building: default.size.stdout
+ 
+Finished building: HAL_Experimental.list
+ 
+
+10:26:06 Build Finished. 0 errors, 0 warnings. (took 1s.306ms)
+

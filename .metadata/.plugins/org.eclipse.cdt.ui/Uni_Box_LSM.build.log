@@ -1,0 +1,38 @@
+09:57:51 **** Incremental Build of configuration Debug for project Uni_Box_LSM ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/KeyPad/hey.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/LCD4x20" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/KeyPad" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/KeyPad/hey.d" -MT"Drivers/KeyPad/hey.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/KeyPad/hey.o"
+../Drivers/KeyPad/hey.c: In function 'Key_Read':
+../Drivers/KeyPad/hey.c:40:5: warning: implicit declaration of function 'lcd_clear' [-Wimplicit-function-declaration]
+   40 |     lcd_clear();
+      |     ^~~~~~~~~
+../Drivers/KeyPad/hey.c:41:5: warning: implicit declaration of function 'lcd_line_1' [-Wimplicit-function-declaration]
+   41 |     lcd_line_1("Lewo");
+      |     ^~~~~~~~~~
+../Drivers/KeyPad/hey.c:43:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   43 |     sprintf(text, "Pozycja = %d",Position);
+      |     ^~~~~~~
+../Drivers/KeyPad/hey.c:43:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Drivers/KeyPad/hey.c:10:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    9 | #include "main.h"
+  +++ |+#include <stdio.h>
+   10 | 
+../Drivers/KeyPad/hey.c:44:5: warning: implicit declaration of function 'lcd_line_4' [-Wimplicit-function-declaration]
+   44 |     lcd_line_4(text);
+      |     ^~~~~~~~~~
+../Drivers/KeyPad/hey.c:64:5: warning: implicit declaration of function 'lcd_line_2' [-Wimplicit-function-declaration]
+   64 |     lcd_line_2("Wartosc i : ");
+      |     ^~~~~~~~~~
+arm-none-eabi-gcc -o "Uni_Box_LSM.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Uni_Box_LSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Uni_Box_LSM.elf
+ 
+arm-none-eabi-size   Uni_Box_LSM.elf 
+arm-none-eabi-objdump -h -S  Uni_Box_LSM.elf  > "Uni_Box_LSM.list"
+   text	   data	    bss	    dec	    hex	filename
+  12788	    124	   1708	  14620	   391c	Uni_Box_LSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Uni_Box_LSM.list
+ 
+
+09:57:52 Build Finished. 0 errors, 6 warnings. (took 1s.350ms)
+

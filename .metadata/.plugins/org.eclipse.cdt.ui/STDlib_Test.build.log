@@ -1,0 +1,11 @@
+10:10:40 **** Incremental Build of configuration Debug for project STDlib_Test ****
+make -j4 all 
+arm-none-eabi-gcc -o "STDlib_Test.elf" @"objects.list"  -Wl,--start-group  -Wl,--end-group -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/STDlib_Test/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STDlib_Test.map" -Wl,--gc-sections -static -L"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/STDlib_Test/Libraries/STM32F4xx_StdPeriph_Driver/inc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Src/main.o: in function `main':
+/home/shammman/Dokumenty/STM32_CubeIDE/Learning/STDlib_Test/Debug/../Src/main.c:20: undefined reference to `GPIO_Init'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:63: STDlib_Test.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+10:10:41 Build Failed. 3 errors, 0 warnings. (took 647ms)
+

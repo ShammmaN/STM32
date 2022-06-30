@@ -1,0 +1,10 @@
+11:18:14 **** Incremental Build of configuration Debug for project HAL_TIMERS ****
+make -j4 all 
+arm-none-eabi-size   HAL_TIMERS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11328	     24	   1712	  13064	   3308	HAL_TIMERS.elf
+Finished building: default.size.stdout
+ 
+
+11:18:15 Build Finished. 0 errors, 0 warnings. (took 524ms)
+

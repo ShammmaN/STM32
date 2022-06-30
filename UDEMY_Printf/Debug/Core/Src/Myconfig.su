@@ -1,0 +1,5 @@
+../Core/Src/Myconfig.c:11:6:MyGPIOInit	4	static
+../Core/Src/Myconfig.c:54:6:GPIO_SET	16	static
+../Core/Src/Myconfig.c:61:6:GPIO_RESET	16	static
+../Core/Src/Myconfig.c:68:6:GPIO_PIN_TOOGLE	16	static
+../Core/Src/Myconfig.c:74:9:GPIO_READ	16	static

@@ -1,0 +1,79 @@
+/*
+ * menu.c
+ *
+ *  Created on: Jun 28, 2022
+ *      Author: shammman
+ */
+
+
+void void menu(uint16_t Position)
+{
+
+	switch(Position)
+	{
+	case 1: menu0(); break;
+
+	case 10: menu10(); break;
+	case 11: menu11(); break;
+	case 12: menu12(); break;
+	case 13; menu13(); break;
+	case 14: menu14(); break;
+	case 15; menu15(); break;
+
+
+	case 2: menu0(); break;
+
+	case 20: menu10(); break;
+	case 21: menu11(); break;
+	case 22: menu12(); break;
+	case 23; menu13(); break;
+	case 24: menu14(); break;
+	case 25; menu15(); break;
+
+	case 3: menu0(); break;
+
+	case 30: menu10(); break;
+	case 31: menu11(); break;
+	case 32: menu12(); break;
+	case 33; menu13(); break;
+	case 34: menu14(); break;
+	case 35; menu15(); break;
+
+	case 4: menu0(); break;
+
+	case 40: menu10(); break;
+	case 41: menu11(); break;
+	case 42: menu12(); break;
+	case 43; menu13(); break;
+	case 44: menu14(); break;
+	case 45; menu15(); break;
+
+	case 5: menu0(); break;
+
+	case 50: menu10(); break;
+	case 51: menu11(); break;
+	case 52: menu12(); break;
+	case 53; menu13(); break;
+	case 54: menu14(); break;
+	case 55; menu15(); break;
+
+	case 6: menu0(); break;
+
+	case 60: menu10(); break;
+	case 61: menu11(); break;
+	case 62: menu12(); break;
+	case 63; menu13(); break;
+	case 64: menu14(); break;
+	case 65; menu15(); break;
+
+
+
+
+	}
+
+
+
+
+
+
+}

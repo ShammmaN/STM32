@@ -1,0 +1,17 @@
+09:11:51 **** Incremental Build of configuration Debug for project hal_hc_sr04 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "hal_hc_sr04.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/hal_hc_sr04/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_hc_sr04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_hc_sr04.elf
+ 
+arm-none-eabi-size   hal_hc_sr04.elf 
+arm-none-eabi-objdump -h -S  hal_hc_sr04.elf  > "hal_hc_sr04.list"
+   text	   data	    bss	    dec	    hex	filename
+  11940	     20	   1676	  13636	   3544	hal_hc_sr04.elf
+Finished building: default.size.stdout
+ 
+Finished building: hal_hc_sr04.list
+ 
+
+09:11:52 Build Finished. 0 errors, 0 warnings. (took 1s.84ms)
+

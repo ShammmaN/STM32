@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;UDEMY_GPIO/Core/Inc/myUART.h&apos; to &apos;MyUART.h&apos;" description="Rename resource &apos;myUART.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/myUART.h" name="MyUART.h" stamp="1654537885168" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;UDEMY_GPIO/Core/Src/myUART.c&apos; to &apos;MyUART.c&apos;" description="Rename resource &apos;myUART.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/myUART.c" name="MyUART.c" stamp="1654537915700" updateReferences="true"/>
+</session>

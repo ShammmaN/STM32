@@ -1,0 +1,3 @@
+../Drivers/Menu/menu.c:10:6:menu	16	static
+../Drivers/Menu/menu.c:76:6:menu1	8	static
+../Drivers/Menu/menu.c:85:6:menu2	8	static
