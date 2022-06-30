@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Uni_Box_LSM,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Uni_Box_LSM Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UniBoxTemplate Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Blinker_Exercises\ Debug/activeLaunchMode=run
@@ -31,6 +31,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UD_OUTPUT_COMPARE\ Debug/active
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UD_OUTPUT_COMPARE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UD_TIM\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UD_TIM\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UniBoxTemplate\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Uni_Box_LSM\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Uni_Box_LSM\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Uni_Box_Temp_std\ Debug/activeLaunchMode=run

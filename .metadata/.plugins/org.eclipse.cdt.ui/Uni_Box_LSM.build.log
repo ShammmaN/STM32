@@ -1,38 +1,65 @@
-09:57:51 **** Incremental Build of configuration Debug for project Uni_Box_LSM ****
+10:36:52 **** Incremental Build of configuration Debug for project Uni_Box_LSM ****
 make -j4 all 
-arm-none-eabi-gcc "../Drivers/KeyPad/hey.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/LCD4x20" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/KeyPad" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/KeyPad/hey.d" -MT"Drivers/KeyPad/hey.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/KeyPad/hey.o"
-../Drivers/KeyPad/hey.c: In function 'Key_Read':
-../Drivers/KeyPad/hey.c:40:5: warning: implicit declaration of function 'lcd_clear' [-Wimplicit-function-declaration]
-   40 |     lcd_clear();
-      |     ^~~~~~~~~
-../Drivers/KeyPad/hey.c:41:5: warning: implicit declaration of function 'lcd_line_1' [-Wimplicit-function-declaration]
-   41 |     lcd_line_1("Lewo");
-      |     ^~~~~~~~~~
-../Drivers/KeyPad/hey.c:43:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   43 |     sprintf(text, "Pozycja = %d",Position);
-      |     ^~~~~~~
-../Drivers/KeyPad/hey.c:43:5: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Drivers/KeyPad/hey.c:10:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-    9 | #include "main.h"
-  +++ |+#include <stdio.h>
-   10 | 
-../Drivers/KeyPad/hey.c:44:5: warning: implicit declaration of function 'lcd_line_4' [-Wimplicit-function-declaration]
-   44 |     lcd_line_4(text);
-      |     ^~~~~~~~~~
-../Drivers/KeyPad/hey.c:64:5: warning: implicit declaration of function 'lcd_line_2' [-Wimplicit-function-declaration]
-   64 |     lcd_line_2("Wartosc i : ");
-      |     ^~~~~~~~~~
-arm-none-eabi-gcc -o "Uni_Box_LSM.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Uni_Box_LSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Uni_Box_LSM.elf
- 
-arm-none-eabi-size   Uni_Box_LSM.elf 
-arm-none-eabi-objdump -h -S  Uni_Box_LSM.elf  > "Uni_Box_LSM.list"
-   text	   data	    bss	    dec	    hex	filename
-  12788	    124	   1708	  14620	   391c	Uni_Box_LSM.elf
-Finished building: default.size.stdout
- 
-Finished building: Uni_Box_LSM.list
- 
+arm-none-eabi-gcc "../Drivers/Menu/menu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/LCD4x20" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/Uni_Box_LSM/Drivers/KeyPad" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/Menu/menu.d" -MT"Drivers/Menu/menu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Menu/menu.o"
+../Drivers/Menu/menu.c:14:3: error: unknown type name 'menu_t'
+   14 |   menu_t* next;
+      |   ^~~~~~
+../Drivers/Menu/menu.c:15:3: error: unknown type name 'menu_t'
+   15 |   menu_t* prev;
+      |   ^~~~~~
+../Drivers/Menu/menu.c:16:3: error: unknown type name 'menu_t'
+   16 |   menu_t* child;
+      |   ^~~~~~
+../Drivers/Menu/menu.c:17:3: error: unknown type name 'menu_t'
+   17 |   menu_t* parent;
+      |   ^~~~~~
+../Drivers/Menu/menu.c:22:1: warning: data definition has no type or storage class
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      | ^~~~~
+../Drivers/Menu/menu.c:22:1: warning: type defaults to 'int' in declaration of 'menu1' [-Wimplicit-int]
+../Drivers/Menu/menu.c:22:9: warning: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |         ^~~~~~~~~~~~~~
+../Drivers/Menu/menu.c:22:9: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:22:26: error: 'menu2' undeclared here (not in a function); did you mean 'menu1'?
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                          ^~~~~
+      |                          menu1
+../Drivers/Menu/menu.c:22:25: warning: excess elements in scalar initializer
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                         ^
+../Drivers/Menu/menu.c:22:25: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:22:34: error: 'menu5' undeclared here (not in a function); did you mean 'menu1'?
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                  ^~~~~
+      |                                  menu1
+../Drivers/Menu/menu.c:22:33: warning: excess elements in scalar initializer
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                 ^
+../Drivers/Menu/menu.c:22:33: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:22:42: error: 'sub_menu1_1' undeclared here (not in a function)
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                          ^~~~~~~~~~~
+../Drivers/Menu/menu.c:22:41: warning: excess elements in scalar initializer
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                         ^
+../Drivers/Menu/menu.c:22:41: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:22:55: warning: excess elements in scalar initializer
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                                       ^~~~
+../Drivers/Menu/menu.c:22:55: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:22:61: warning: excess elements in scalar initializer
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      |                                                             ^~~~
+../Drivers/Menu/menu.c:22:61: note: (near initialization for 'menu1')
+../Drivers/Menu/menu.c:24:8: error: conflicting types for 'menu1'
+   24 | menu_t menu1;
+      |        ^~~~~
+../Drivers/Menu/menu.c:22:1: note: previous definition of 'menu1' was here
+   22 | menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+      | ^~~~~
+make: *** [Drivers/Menu/subdir.mk:19: Drivers/Menu/menu.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
 
-09:57:52 Build Finished. 0 errors, 6 warnings. (took 1s.350ms)
+10:36:53 Build Failed. 9 errors, 8 warnings. (took 767ms)
 

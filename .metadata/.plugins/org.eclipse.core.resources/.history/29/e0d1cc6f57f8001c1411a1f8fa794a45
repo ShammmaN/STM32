@@ -1,0 +1,91 @@
+/*
+ * menu.c
+ *
+ *  Created on: Jun 28, 2022
+ *      Author: shammman
+ */
+#include "menu.h"
+
+
+typedef struct menu_t{
+  const char * name;
+  menu_t * next;
+  menu_t * prev;
+  menu_t * child;
+  menu_t * parent;
+  void (*menu_function)(void);
+};
+
+
+menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };     // utworzenie struktury
+
+menu_t menu1;
+  menu_t sub_menu1_1;
+  menu_t sub_menu1_2;
+menu_t menu2;
+  menu_t sub_menu2_1;
+  menu_t sub_menu2_2;
+menu_t menu3;
+  menu_t sub_menu3_1;
+menu_t menu4;
+  menu_t sub_menu4_1;
+    menu_t sub_menu4_1_1;
+      menu_t sub_menu4_1_1_1;
+      menu_t sub_menu4_1_1_2;
+      menu_t sub_menu4_1_1_3;
+      menu_t sub_menu4_1_1_4;
+      menu_t sub_menu4_1_1_5;
+      menu_t sub_menu4_1_1_6;
+      menu_t sub_menu4_1_1_7;
+      menu_t sub_menu4_1_1_8;
+    menu_t sub_menu4_1_2;
+      menu_t sub_menu4_1_2_1;
+      menu_t sub_menu4_1_2_2;
+      menu_t sub_menu4_1_2_3;
+    menu_t sub_menu4_1_3;
+    menu_t sub_menu4_1_4;
+  menu_t sub_menu4_2;
+menu_t menu5;
+menu_t *currentPointer=&menu1;
+
+
+
+
+
+int menu_index=0;
+int lcd_row_pos=0;
+int lcd_row_pos_level_1=0, lcd_row_pos_level_2=0;
+
+
+void menu_init(void) {
+// definition of menu's components: (*name, *next, *prev, *child, *parent, (*menu_function))
+menu1={ "CONFIGRATION", &menu2, &menu5, &sub_menu1_1, NULL, NULL };
+  sub_menu1_1={ "Offset", &sub_menu1_2, &sub_menu1_2,NULL, &menu1, offset };
+  sub_menu1_2= { "Datum", NULL, &sub_menu1_1, NULL, &menu1,datum};
+menu2={ "DATE AND TIME", &menu3, &menu1, &sub_menu2_1, NULL, NULL };
+  sub_menu2_1={ "Date", &sub_menu2_2, &sub_menu2_2, NULL, &menu2, dateset};
+  sub_menu2_2={ "Time", NULL, &sub_menu2_1, NULL, &menu2, timeset};
+menu3={ "LOGGING", &menu4, &menu2, &sub_menu3_1, NULL,NULL};
+  sub_menu3_1={ "Burst", NULL,&sub_menu3_1, NULL, &menu3,burst};
+menu4={ "OUTPUT", &menu5, &menu3, &sub_menu4_1, NULL, NULL };
+  sub_menu4_1={ "RS232", &sub_menu4_2, &sub_menu4_2, &sub_menu4_1_1, &menu4, NULL };
+    sub_menu4_1_1={ "Baud Rate",&sub_menu4_1_2, &sub_menu4_1_4, &sub_menu4_1_1_1, &sub_menu4_1, NULL };
+      sub_menu4_1_1_1={ "1200", &sub_menu4_1_1_2, &sub_menu4_1_1_8, NULL, &sub_menu4_1_1, baud1200};
+      sub_menu4_1_1_2={ "2400", &sub_menu4_1_1_3, &sub_menu4_1_1_1, NULL, &sub_menu4_1_1, baud2400};
+      sub_menu4_1_1_3={ "4800", &sub_menu4_1_1_4, &sub_menu4_1_1_2, NULL, &sub_menu4_1_1, baud4800};
+      sub_menu4_1_1_4={ "9600", &sub_menu4_1_1_5, &sub_menu4_1_1_3, NULL, &sub_menu4_1_1, baud9600};
+      sub_menu4_1_1_5={ "19200", &sub_menu4_1_1_6, &sub_menu4_1_1_4, NULL, &sub_menu4_1_1, baud19200};
+      sub_menu4_1_1_6={ "38400", &sub_menu4_1_1_7, &sub_menu4_1_1_5, NULL, &sub_menu4_1_1, baud38400};
+      sub_menu4_1_1_7={ "57600", &sub_menu4_1_1_8, &sub_menu4_1_1_6, NULL, &sub_menu4_1_1, baud57600};
+      sub_menu4_1_1_8={ "115200",NULL, &sub_menu4_1_1_7, NULL,&sub_menu4_1_1, baud115200};
+    sub_menu4_1_2={ "Parity",&sub_menu4_1_3, &sub_menu4_1_1, &sub_menu4_1_2_1, &sub_menu4_1, NULL };
+      sub_menu4_1_2_1={ "Odd", &sub_menu4_1_2_2, &sub_menu4_1_2_3, NULL, &sub_menu4_1_2, odd };
+      sub_menu4_1_2_2={ "Even", &sub_menu4_1_2_3, &sub_menu4_1_2_1, NULL, &sub_menu4_1_2, even };
+      sub_menu4_1_2_3={ "None", NULL, &sub_menu4_1_2_2, NULL, &sub_menu4_1_2, none};
+    sub_menu4_1_3={ "Data Bit",&sub_menu4_1_4, &sub_menu4_1_2, NULL, &sub_menu4_1, databit };
+    sub_menu4_1_4={ "Stop Bit",NULL, &sub_menu4_1_1, NULL, &sub_menu4_1, stopbit};
+  sub_menu4_2={ "Bluetooth", NULL, &sub_menu4_1, NULL, &menu4, bluetooth};
+menu5={ "SETTINGS", NULL, &menu4, NULL, NULL, settings };
+
+
+}

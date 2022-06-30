@@ -1,0 +1,10 @@
+../Drivers/LCD_I2C/lcd_i2c.c:15:6:lcd_send_cmd	32	static
+../Drivers/LCD_I2C/lcd_i2c.c:28:6:lcd_send_data	32	static
+../Drivers/LCD_I2C/lcd_i2c.c:41:6:lcd_clear	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:50:6:lcd_init	8	static
+../Drivers/LCD_I2C/lcd_i2c.c:76:6:lcd_send_string	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:81:6:lcd_line_1	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:87:6:lcd_line_2	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:92:6:lcd_line_3	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:97:6:lcd_line_4	16	static
+../Drivers/LCD_I2C/lcd_i2c.c:104:6:lcd_set_cursor	24	static

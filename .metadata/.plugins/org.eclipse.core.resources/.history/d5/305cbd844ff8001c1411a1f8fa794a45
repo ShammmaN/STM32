@@ -1,0 +1,19 @@
+/*
+ * menu.c
+ *
+ *  Created on: Jun 28, 2022
+ *      Author: shammman
+ */
+#include "menu.h"
+
+
+
+
+typedef struct menu_t {
+  const char * name;
+  menu_t next;
+  menu_t prev;
+  menu_t* child;
+  menu_t* parent;
+  void (*menu_function)(void);
+}menu_t;

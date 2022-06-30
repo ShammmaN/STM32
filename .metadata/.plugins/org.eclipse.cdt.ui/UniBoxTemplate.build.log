@@ -1,0 +1,17 @@
+21:50:53 **** Incremental Build of configuration Debug for project UniBoxTemplate ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/Keypad/Keypad.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/UniBoxTemplate/Drivers/Keypad" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/UniBoxTemplate/Drivers/LCD_I2C" -I"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/UniBoxTemplate/Drivers/Menu" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/Keypad/Keypad.d" -MT"Drivers/Keypad/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Keypad/Keypad.o"
+arm-none-eabi-g++ -o "UniBoxTemplate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/shammman/Dokumenty/STM32_CubeIDE/Learning/UniBoxTemplate/STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UniBoxTemplate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UniBoxTemplate.elf
+ 
+arm-none-eabi-size   UniBoxTemplate.elf 
+arm-none-eabi-objdump -h -S  UniBoxTemplate.elf  > "UniBoxTemplate.list"
+   text	   data	    bss	    dec	    hex	filename
+  13220	    124	   1796	  15140	   3b24	UniBoxTemplate.elf
+Finished building: default.size.stdout
+ 
+Finished building: UniBoxTemplate.list
+ 
+
+21:50:54 Build Finished. 0 errors, 0 warnings. (took 1s.152ms)
+

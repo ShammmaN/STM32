@@ -1,0 +1,7 @@
+../Drivers/Menu/Menu.c:14:6:menu_init	8	static
+../Drivers/Menu/Menu.c:26:6:menu_set	16	static
+../Drivers/Menu/Menu.c:33:6:menu	16	static
+../Drivers/Menu/Menu.c:99:13:menu0	8	static
+../Drivers/Menu/Menu.c:108:13:menu1	8	static
+../Drivers/Menu/Menu.c:118:6:animation	16	static
+../Drivers/Menu/Menu.c:129:6:menu10	4	static

@@ -47,8 +47,8 @@
 /* USER CODE BEGIN PV */
  uint32_t previousMillis = 0;
  uint32_t currentMillis = 0;
- uint32_t counterOutside = 0; //For testing only
- uint32_t counterInside = 0; //For testing only
+ uint32_t counterOutside = 0;	 //For testing only
+ uint32_t counterInside = 0;	 //For testing only
 
 
 /* USER CODE END PV */
@@ -261,11 +261,11 @@ void animation(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 
-	counterOutside++; //For testing only
+	counterOutside++;						 //For testing only
 	currentMillis = HAL_GetTick();
-	  if (currentMillis - previousMillis > 25)
+	  if (currentMillis - previousMillis > 30)
 	  {
-	    counterInside++; //For testing only
+	    counterInside++;					 //For testing only
 	    Key_Read(GPIO_Pin);
 	    previousMillis = currentMillis;
 	  }

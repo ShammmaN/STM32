@@ -1,0 +1,55 @@
+/*
+ * menu.h
+ *
+ *  Created on: Jun 28, 2022
+ *      Author: shammman
+ */
+#include "stm32f4xx.h"
+#include <string.h>
+#include <stdlib.h>
+#include "i2c-lcd.h"
+
+
+#define LCD_ROWS 4
+#define LCD_COLS 20
+void buf_locate(int, int);
+void buf_char(char);
+void buf_clear(void);
+void lcd_refresh(void);
+void buf_str(char *);
+void buf_str_XY(int, int, char *);
+void buf_int(int);
+void buf_clear_menu(void);
+
+char lcd_buf[LCD_ROWS][LCD_COLS];
+char lcd_buf_old[LCD_ROWS][LCD_COLS];
+int  lcd_buf_x, lcd_buf_y;
+
+
+void menu_init(void);
+void menu_refresh(void);
+void menu_next(void);
+void menu_prev(void);
+void menu_enter(void);
+void menu_back(void);
+
+void key_next_press(void);
+void key_prev_press(void);
+void key_enter_press(void);
+void key_back_press(void);
+
+
+void (*key_next_func)(void) = &menu_next;
+void (*key_prev_func)(void) = &menu_prev;
+void (*key_enter_func)(void)= &menu_enter;
+void (*key_back_func)(void) = &menu_back;
+
+
+void offset(void);void datum(void);
+void dateset(void);void timeset(void);
+void burst(void);
+void baud1200(void);void baud2400(void);void baud4800(void);void baud9600(void);void baud19200(void);void baud38400(void);void baud57600(void);void baud115200(void);
+void odd(void);void even(void);void none(void);
+void databit(void);void stopbit(void);
+void bluetooth(void);
+void settings(void);

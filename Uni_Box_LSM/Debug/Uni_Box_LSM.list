@@ -875,7 +875,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
  8000842:	4603      	mov	r3, r0
  8000844:	80fb      	strh	r3, [r7, #6]
 
-	counterOutside++; //For testing only
+	counterOutside++;						 //For testing only
  8000846:	4b11      	ldr	r3, [pc, #68]	; (800088c <HAL_GPIO_EXTI_Callback+0x50>)
  8000848:	681b      	ldr	r3, [r3, #0]
  800084a:	3301      	adds	r3, #1
@@ -895,7 +895,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
  8000864:	2b19      	cmp	r3, #25
  8000866:	d90c      	bls.n	8000882 <HAL_GPIO_EXTI_Callback+0x46>
 	  {
-	    counterInside++; //For testing only
+	    counterInside++;					 //For testing only
  8000868:	4b0b      	ldr	r3, [pc, #44]	; (8000898 <HAL_GPIO_EXTI_Callback+0x5c>)
  800086a:	681b      	ldr	r3, [r3, #0]
  800086c:	3301      	adds	r3, #1
